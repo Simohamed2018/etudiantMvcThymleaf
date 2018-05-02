@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8" />
+<title>Simo Thymleaf example</title>
+
+ <link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+<link rel="stylesheet" type="text/css"  
+          href="../static/css/monStyle.css" th:href="@{/css/monStyle.css}"/>
+</head>
+<body >
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSimo</a>
+    </div>
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#">Home</a></li>
+   	<li><a th:href="@{form}">Add Etudiant</a></li>
+    <li><a th:href="@{chercherParEmail}">Chercher Etudiant</a></li>
+    <li><a href="#">Menu 3</a></li>     
+    </ul>
+  </div>
+</nav>
+
+<div layout:fragment="content">
+
+
+</div>
+<!-- <div th:replace="fragment/header::header"></div>
+<div layout:fragment="content"></div>
+
+<div th:replace="fragment/footer::footer"></div>
+ -->
+</body>
+</html>

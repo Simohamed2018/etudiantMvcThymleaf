@@ -1,0 +1,45 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+    <title>Simo Thymleaf example</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all" 
+          href="../../css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" />
+  </head>
+
+  <body>
+  <div class="container">
+    <h1>Salam For Students</h1> <br>
+   <button type="button" class="btn btn-primary">Primary</button>
+    
+  </div>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th >#</th>
+      <th >Nom</th>
+      <th >Email</th>
+      <th >Date</th>
+      <th >photo</th>
+    </tr>
+  </thead>
+  <tbody>
+    		<tr th:each="e:${listEtudiants}">
+		      <td th:text="${e.id}" ></td>      
+		      <td th:text="${e.nom}" ></td>
+		      <td th:text="${e.email}" ></td>
+		      <td th:text="${e.dateNaissance}"></td>
+		      <td th:text="${e.photo}"></td>
+      
+    </tr>
+   
+  </tbody>
+</table>
+  
+  
+  </body>
+
+</html>
